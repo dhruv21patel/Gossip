@@ -32,8 +32,8 @@ Additionally, the project integrates **Jenkins** for continuous integration, run
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/gossip-protocol-project.git
-cd gossip-protocol-project
+git clone https://github.com/dhruv21patel/Gossip.git
+
 ### 2. Building the Docker Images Locally
 
 The Docker images for both Java and Go servers are already configured in the Dockerfile. To build the images, use the following commands:
@@ -41,13 +41,13 @@ The Docker images for both Java and Go servers are already configured in the Doc
 #### Build the Java Server Image
 
 ```bash
-docker build -t your-dockerhub-username/java-server ./java-server
+docker build -t Java_Server ./Gossip
 ```
 
 #### Build the Go Server Image
 
 ```bash
-docker build -t your-dockerhub-username/go-server ./go-server
+docker build -t go-server ./Gossip_Go
 ```
 
 ### 3. Running the Docker Images Locally
@@ -57,13 +57,13 @@ Once the images are built, you can run the containers locally:
 #### Run Java Server Container
 
 ```bash
-docker run -d -p 8081:8080 --name java-server your-dockerhub-username/java-server
+docker run -d -p 8081:8080 --name java-server java-server
 ```
 
 #### Run Go Server Container
 
 ```bash
-docker run -d -p 8082:8080 --name go-server your-dockerhub-username/go-server
+docker run -d -p 8082:8080 --name go-server go-server
 ```
 
 ### 4. Jenkins Integration
